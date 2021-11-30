@@ -1,0 +1,99 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+section{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+* { 
+    padding: 0; 
+    margin: 0; 
+    background-color: #4DCDEE;
+}
+canvas { 
+    background-image: url("img/sea.jpg");
+    background-size: cover;
+    display: block; 
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.9);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 145px;
+    text-align: center;
+}
+#myCanvas{
+    width: 700px;
+    height: 600px;
+}
+#scoreLifes{
+    width: 700px;
+    height: 40px;
+    background-color: #1182E2;
+    color: white;
+    margin-top: 100px;
+    font-size: 30px;
+    padding-top: 6px;
+    box-shadow: 0px -5px 20px 0px rgba(0, 0, 0, 0.9);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#score{
+    background-color: #1182E2;
+    color: white;
+    margin-left: -320px;
+    position: absolute;
+}
+#lifes{
+    background-color: #1182E2;
+    color: white;
+    float: right;
+    margin-right: 25px;
+}
+.buttonReset{
+    margin-top: 350px;
+    font-size: 50px;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #fff;
+    background-color: #41C3E7;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+}
+.buttonReset:hover{
+    background-color: #30B2D6;
+}
+
+section div{
+    position: absolute;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-1200%);
+        opacity: 0;
+    }
+}
