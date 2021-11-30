@@ -31,7 +31,7 @@ const brickOffsetLeft = 14;
 drawLifes();
 drawScore();
 
-const options = ['#DC3E31', '#E59209', '#EFEE0A','#99EF0A', '#38EF0A', '#0AEF9E',, '#0AEDEF', '#A30AEF', '#EF0AE1', '#EF0A6E', '#EF0A0A'];
+//const options = ['#DC3E31', '#E59209', '#EFEE0A','#99EF0A', '#38EF0A', '#0AEF9E',, '#0AEDEF', '#A30AEF', '#EF0AE1', '#EF0A6E', '#EF0A0A'];
 let bricks = [];
 for(let column=0; column<brickColumnCount; column++) {
     bricks[column] = [];
@@ -101,9 +101,9 @@ function drawLifes(){
 
 function drawBall(){
     ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0*Math.PI, 2*Math.PI); //rysowanie kółka
+    ctx.arc(x, y, ballRadius, 0*Math.PI, 2*Math.PI);
     ctx.fillStyle = "#0221D3";
-    ctx.fill(); //uzupełnienie koloru
+    ctx.fill();
     ctx.closePath();
 }
 
@@ -138,10 +138,10 @@ function drawBricks() {
                 let brickY = (row*(brickHeight+brickPadding))+brickOffsetTop;
                 bricks[column][row].x = brickX;
                 bricks[column][row].y = brickY;
-                //ctx.fillStyle = 'red';
-                 let index = Math.floor(Math.random() * (options.length));
-                 let colorBrick = options[index];
-                 ctx.fillStyle = colorBrick;
+                ctx.fillStyle = '#FB497A';
+                //let index = Math.floor(Math.random() * (options.length));
+                //let colorBrick = options[index];
+                //ctx.fillStyle = colorBrick;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
                 ctx.fill();
@@ -161,7 +161,7 @@ function drawButton(){
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); //czyszczenie poprzedniego wykonania
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawBricks();
     drawPaddle();
@@ -204,7 +204,7 @@ function draw() {
         paddleX -= 4;
     }
 
-    x += newX; //przesunięcie kółka
+    x += newX;
     y += newY;
     
 }
